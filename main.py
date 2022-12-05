@@ -1,8 +1,7 @@
-quantidade= 0
+SenhaT= int(input("digite uma senha:"))
 
-for i in range(5):
-    a= int(input("digite um número:"))
-    if a%2 == 0:
-        quantidade=quantidade+1
+while SenhaT != 1302:
+    print("Senha Errada")
+    SenhaT= int(input("Digite Uma Nova Senha:"))
 
-print("o usuário digitou", quantidade, "números pares." )
+print("Acesso Permitido!")
