@@ -1,7 +1,7 @@
-SenhaT= int(input("digite uma senha:"))
+SenhaT= int(input("Digite uma senha:"))
 
-while SenhaT != 1302:
-    print("Senha Errada")
+while SenhaT != 2002:
+    print("Senha Invalida\ntente novamente!")
     SenhaT= int(input("Digite Uma Nova Senha:"))
 
 print("Acesso Permitido!")
