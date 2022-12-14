@@ -1,6 +1,6 @@
 import random
 
-class Conta():
+class Corrente():
     def __init__(self, numConta):
         self.num = numConta
         self.saldo = 0
@@ -9,7 +9,16 @@ class Conta():
         self.saldo = self.saldo + valor
     
     def saque(self, valor):
-        self.saldo = self.saldo - valor
+        if self.saldo >= valor:
+            self.saldo = self.saldo - valor
+            return True
+        else:
+            return False
+
+class Poupanca(Corrente):
+
+    def render(self):
+        self.saldo= self.saldo + (self.saldo*0.01)
     
 class Banco():
     def __init__(self, nome):
@@ -19,10 +28,16 @@ class Banco():
     def getNome(self):
         return self.nome
     
-    def criarConta(self):
+    def criarCorrente(self):
         num = random.randint(0,10000)
-        c= Conta(num)
+        c= Corrente(num)
         self.contas.append(c)
+        return num
+    
+    def criarPoupanca(self):
+        num = random.randint(0, 1000)
+        p = Poupanca(num)
+        self.contas.append(p)
         return num
 
     def consultaSaldo(self, numConta):
@@ -39,6 +54,12 @@ class Banco():
     def sacar(self, numConta, grana):
         for conta in self.contas:
             if conta.num==numConta:
-                conta.saque(grana)
+                return conta.saque(grana)
 
+    def renderPoupanca(self, numConta):
+        for i in self.contas:
+            if i.numero == numConta and isinstance(i, Poupanca):
+                i.render()
+                return True
+        return False
 
