@@ -57,9 +57,9 @@ class Banco():
                 return conta.saque(grana)
 
     def renderPoupanca(self, numConta):
-        for i in self.contas:
-            if i.numero == numConta and isinstance(i, Poupanca):
-                i.render()
+        for conta in self.contas:
+            if conta.numero == numConta and isinstance(conta, Poupanca):
+                conta.render()
                 return True
         return False
 
