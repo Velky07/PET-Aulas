@@ -95,3 +95,15 @@ class Banco():
                 return True
         return False
 
+    def executarMenu():
+        return(
+            print("Menu")
+            ,print("1 - Criar nova conta")
+            ,print("2 - Consultar Saldo da conta")
+            ,print("3 - Depositar na conta")
+            ,print("4 - Sacar da conta")
+            ,print("5 - Render Poupança")
+            ,print("6 - Render bônus")
+            ,print("0 - Sair")
+            )
+

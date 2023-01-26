@@ -2,14 +2,7 @@ from bancoLib import Banco
 
 print("Bem vindo")
 bancoUfrpe= Banco("Belk Inc.")
-print("Menu")
-print("1 - Criar nova conta")
-print("2 - Consultar Saldo da conta")
-print("3 - Depositar na conta")
-print("4 - Sacar da conta")
-print("5 - Render Poupança")
-print("6 - Render bônus")
-print("0 - Sair")
+Banco.executarMenu()
 escolha= int(input("Digite a opção desejada:"))
 while escolha>0:
     if escolha==1:
@@ -69,4 +62,5 @@ while escolha>0:
         else:
             print("A conta não é bonificada ou não existe")
         print("O saldo atual da conta" , n , "é de: R$", Saldo)
+    Banco.executarMenu()
     escolha= int(input("Digite a opção desejada:"))
