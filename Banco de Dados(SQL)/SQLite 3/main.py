@@ -32,15 +32,16 @@ while escolha > 0:
         numConta = int(input("digite o numero da conta:"))
         valor = int(input("digite o valor que deseja depositar:"))
         saldo = bancoUfrpe.depositar(numConta, valor)
-        print("Valor Depositado")
+        print("Você depositou R$", valor)
 
     elif escolha == 4:
         print("Sacando da Conta...")
         numConta = int(input("digite o numero da conta:"))
         valor = int(input("digite o valor que deseja sacar:"))
         resp = bancoUfrpe.sacar(numConta, valor)
-        if resp:  # significa resp == True
-            print("Valor Sacado")
+        Saldo= bancoUfrpe.consultaSaldo(numConta)
+        if resp:
+            print("Você sacou R$", valor,"\nSeu Saldo atual é de:\nR$",Saldo)
         else:
             print("Saldo Insuficiente")
     else:
