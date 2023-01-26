@@ -1,4 +1,4 @@
-from bancoLib import Banco
+from bancoLibb import Banco
 
 print("Bem vindo")
 bancoUfrpe= Banco("Belk Inc.")
