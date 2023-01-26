@@ -1,6 +1,5 @@
 from bancoLib import Banco
 
-
 def imprimeMenu():
     print("Menu")
     print("1 - Criar uma Nova Conta")
@@ -8,7 +7,6 @@ def imprimeMenu():
     print("3 - Depositar na Conta")
     print("4 - Sacar na Conta")
     print("0 - Sair")
-
 
 print("Bem-vindo")
 bancoUfrpe = Banco("UABJ")
@@ -27,7 +25,7 @@ while escolha > 0:
         print("Consultando Saldo...")
         numConta = int(input("digite o numero da conta:"))
         saldo = bancoUfrpe.consultaSaldo(numConta)
-        print("o saldo da conta", numConta, "é", saldo, "R$")
+        print("o saldo da conta", numConta, "é R$", saldo)
 
     elif escolha == 3:
         print("Depositando Conta...")
@@ -45,7 +43,7 @@ while escolha > 0:
             print("Valor Sacado")
         else:
             print("Saldo Insuficiente")
-
-
+    else:
+        bancoUfrpe.close()
     imprimeMenu()
     escolha = int(input("digite a opção desejada:"))
