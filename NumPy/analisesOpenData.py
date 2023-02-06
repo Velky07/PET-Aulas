@@ -98,6 +98,11 @@ else:
 #Conseguimos no fim observar que também é rejeitado a hipótese nula, coisa que podemos observar desde suas médias, mas não teriamos como concluir sem o T_Teste.
 #Concluimos então que as licitações desertas não gastam a mesma quantidade que as em andamento e que sua diferença é gritante.
 
+
+
+
+
+
 #3ª Análise
 print("3ª Análise\n")
 # Read data from CSV file
@@ -145,6 +150,11 @@ else:
 #o seu p_value nesta se aproximou bastante do nosso alpha, logo a diferença que é reefletida na média, não é tão gritante quanto na análise anterior, 
 #onde a média refletiu a diferença dos dados.
 
+
+
+
+
+
 #4ª Análise
 print("4ª Análise\n")
 # Read data from CSV file
@@ -188,6 +198,11 @@ else:
 
 #Após análise feita, observamos que falhou ao rejeitar a hipótese com quase 92% de erro, logo podemos concluir que os gastos em relação a esses dois objetos é basicamente o mesmo, 
 #tambêm é possivel observar que suas médias ficaram relativamente distantes, mas mesmo assim, foi aceita a hipótese nula, pois os dados são extremamente próximos.
+
+
+
+
+
 
 #5ª Análise
 print("5ª Análise\n")
